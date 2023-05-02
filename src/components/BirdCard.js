@@ -1,15 +1,15 @@
 import React from "react";
 // import useState from "react"
 
-function BirdCard({ bird, setCartItems }) {
+function BirdCard({ bird, cartItems, setCartItems }) {
 
-    const handleCart = () => {
-        const birdData = {
+    const addToCart = () => {
+        const addedBird = {
             name: bird.name,
             amount: bird.amount
         }
-        setCartItems(cartItems => [...cartItems, birdData]);
-        // setCartItem([...cartItems, birdData]);
+        setCartItems([...cartItems, addedBird]);
+        // setCartItems(cartItems => [...cartItems, addedBird]);
     }
     
     return (
@@ -17,7 +17,7 @@ function BirdCard({ bird, setCartItems }) {
             <p className="name">{bird.name}</p>
             <p>Price: ${bird.amount.toFixed(2)}</p>
             <img src={bird.img} alt={bird.name} />
-            <button onClick = {handleCart}>Adopt</button>
+            <button onClick = {addToCart}>Adopt</button>
         </ul>
     );
 }

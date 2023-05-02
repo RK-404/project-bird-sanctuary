@@ -14,19 +14,19 @@ function App () {
 
   useEffect(() => {
     let price = 0;
-    for (let item of cartItems) {
-      price += item.amount;
-    }
+    cartItems.forEach(item => price += item.amount);
+
     if (cartItems.length >= 3) {
       price *= 0.9;
       setDiscount(true);
-    } 
+    }
     setTotalPrice(price);
+
   }, [cartItems]);
 
   return (
     <main>
-      <div className="cart-checkout">
+      <div className="left-section">
         <Cart 
           cartItems={cartItems}
           totalPrice={totalPrice}
@@ -42,9 +42,10 @@ function App () {
 
       <div className="birds">
         {birdsData.map((bird) => (
-          <BirdCard 
+          <BirdCard
             key={bird.id}
             bird={bird}
+            cartItems={cartItems}
             setCartItems={setCartItems}
           />
           ))}

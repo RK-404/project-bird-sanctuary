@@ -2,21 +2,21 @@ import React from "react";
 
 function Checkout({ cartItems, setCartItems, setDiscount }) {
 
-  function handelSubmit(event) {
+  const handelSubmit = (event) => {
     event.preventDefault();
 
     if (cartItems.length) {
       setCartItems([]);
       setDiscount(false);
       document.getElementById("checkout-form").reset();
-      alert("You have adopted birds. Thank you!");
+      window.alert("You have adopted birds. Thank you!");
     }
-    else alert("Add bird(s) to checkout!");
+    else window.alert("Add bird(s) to checkout!");
   }
   
-  return(
+  return (
     <div className="checkout">
-      <h4>Checkout</h4>
+      <h3>Checkout</h3>
       <form id="checkout-form" onSubmit={handelSubmit} >
         <label>First Name</label>
         <input type="text" required />
@@ -29,7 +29,7 @@ function Checkout({ cartItems, setCartItems, setDiscount }) {
 
         <label>Zip Code</label>
         <input type="number" required />
-
+        <br/>
         <input type="submit"></input>
       </form>
     </div>
