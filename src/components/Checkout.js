@@ -1,13 +1,12 @@
 import React from "react";
 
-function Checkout({ cartItems, setCartItems, setDiscount }) {
+function Checkout({ cartItems, setCartItems }) {
 
   const handelSubmit = (event) => {
     event.preventDefault();
 
     if (cartItems.length) {
       setCartItems([]);
-      setDiscount(false);
       document.getElementById("checkout-form").reset();
       window.alert("You have adopted birds. Thank you!");
     }

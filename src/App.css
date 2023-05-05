@@ -90,3 +90,15 @@ ul li {
     margin: auto;
     width: 75%;
 }
+
+.remove {
+    background-color: #64c4ff;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px 8px 5px 8px;
+}
+
+.remove:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+}
