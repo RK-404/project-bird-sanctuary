@@ -68,16 +68,13 @@ ul li {
 
 .card img {
     width: 140px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px;
+    margin: auto;
 }
 
 .card p {
     width: 100%;
     text-align: center;
-    padding-bottom: 0%;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 

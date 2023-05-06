@@ -31,11 +31,11 @@ function Cart({ cartItems, setCartItems, totalPrice, bonusItems }) {
         {cartItems.map((bird, index) => (
           <li key={index}>
             {`${bird.name} $${bird.amount.toFixed(2)} `}
-            <strong className="remove" onClick={() => removeFromCart(index)}>X</strong>
+            <span className="remove" onClick={() => removeFromCart(index)}>X</span>
           </li>
         ))}
       </ol>
-      <p><strong> Your donation has quapfied you for the following items:</strong></p>
+      <p><strong>Your donation has quapfied you for the following items:</strong></p>
       <ul>
         {bonuses.map((bonus, index) => <li key={index}>{bonus}</li> )}
       </ul>
